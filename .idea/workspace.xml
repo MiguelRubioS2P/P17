@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27961a81-2ddd-470b-bc4c-045116fc548e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/P17/cat/paucasesnocescifp/sppsp/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/P17/cat/paucasesnocescifp/sppsp/model/Cliente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/P17/cat/paucasesnocescifp/sppsp/model/Servidor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P17/cat/paucasesnocescifp/sppsp/model/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P17/cat/paucasesnocescifp/sppsp/model/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P17/cat/paucasesnocescifp/sppsp/model/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P17/cat/paucasesnocescifp/sppsp/model/Servidor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cat/paucasesnocescifp/sppsp/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cat/paucasesnocescifp/sppsp/model/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cat/paucasesnocescifp/sppsp/model/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cat/paucasesnocescifp/sppsp/model/Servidor.java" afterDir="false" />
     </list>
@@ -95,7 +93,7 @@
       <updated>1581773966286</updated>
       <workItem from="1581773972131" duration="1516000" />
       <workItem from="1581777195218" duration="4570000" />
-      <workItem from="1581799097207" duration="61000" />
+      <workItem from="1581799097207" duration="2520000" />
     </task>
     <servers />
   </component>

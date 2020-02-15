@@ -7,36 +7,31 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-//El contingut del missatge dependrà de la frase rebuda:
-//
-//Si la frase és "Com et dius?", respondrà amb la cadena "Em dic Toni Ballador".
-//
-//Si la frase és "Quantes línies de codi tens?", respondrà amb el nombre de línies del teu codi de servidor.
-//
-//Si la frase es qualsevol altra cosa, respondrà "No he entès la pregunta".
-//
-//Aquests missatges s'han de mostrar pel client!
-
 public class Servidor {
 
     public static void main(String[] args) {
 
         Boolean abierto = true;
+        ServerSocket serverSocket = null;
+        Socket socketCliente = null;
+        DataInputStream entrada = null;
+        DataOutputStream salida = null;
         //Iniciamos el socket del servidor con un puerto por defecto
         try {
-            ServerSocket serverSocket = new ServerSocket(5555);
+            serverSocket = new ServerSocket(5555);
 
             System.out.println("Servidor iniciado");
 
+            //iniciamos un socket que seran los clientes que se conecten a nuestro servidor
+            socketCliente = serverSocket.accept();
+
+            //Inicializamos la entrada de la información que el cliente manda al servidor
+            entrada = new DataInputStream(socketCliente.getInputStream());
+
+            //Inicializamos la respuesta del servidor mandara al cliente
+            salida = new DataOutputStream(socketCliente.getOutputStream());
+
             while(abierto){
-                //iniciamos un socket que seran los clientes que se conecten a nuestro servidor
-                Socket socketCliente = serverSocket.accept();
-
-                //Inicializamos la entrada de la información que el cliente manda al servidor
-                DataInputStream entrada = new DataInputStream(socketCliente.getInputStream());
-
-                //Inicializamos la respuesta del servidor mandara al cliente
-                DataOutputStream salida = new DataOutputStream(socketCliente.getOutputStream());
 
                 switch (entrada.readUTF()){
                     case "Com et dius?":
@@ -56,17 +51,12 @@ public class Servidor {
                         break;
                 }
 
-                entrada.close();
-                salida.close();
-                socketCliente.close();
-
             }
-
+            entrada.close();
+            salida.close();
+            socketCliente.close();
             serverSocket.close();
 
-
-            //System.out.println("Servidor apagado");
-            //serverSocket.close();
 
         } catch (IOException e) {
             System.out.println("Error Servidor: " + e.getMessage());
