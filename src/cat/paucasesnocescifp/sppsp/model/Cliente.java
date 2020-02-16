@@ -37,9 +37,10 @@ public class Cliente {
                 // Escaner el cual permite personalizar el texto enviado al servidor
                 dato = sc.nextLine();
                 if("Tengo que programar".equals(dato)){
-                    System.out.println("Cerrando la conexión con el servidor");
-                    abierto = false;
                     sortida.writeUTF(dato);
+                    System.out.println("El servidor dice: " + entrada.readUTF());
+                    abierto = false;
+
                 }else{
                     sortida.writeUTF(dato);
                     System.out.println("El servidor dice: " + entrada.readUTF());
